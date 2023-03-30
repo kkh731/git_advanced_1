@@ -1,7 +1,6 @@
 from typing import List
-
 # Skeleton code for even_list
-def even_list(int_list: List[int]) -> List[int]:
+def even_list(int_list):
     """
     Determines if a number is even and return an even list.
     Args:
@@ -10,10 +9,15 @@ def even_list(int_list: List[int]) -> List[int]:
     A list of even integers.
     """
     # TODO: Implement even_list
-    pass
+    new_list = []
+    for x in int_list:
+        if x%2 == 0:
+            new_list.append(x)
+    
+    return new_list
 
 # Skeleton code for sum_of_squares_of_even
-def sum_of_squares_of_even(even_int_list: List[int]) -> int:
+def sum_of_squares_of_even(even_int_list):
     """
     Computes the sum of the squares of all even numbers in a list of integers.
     Args:
@@ -22,7 +26,13 @@ def sum_of_squares_of_even(even_int_list: List[int]) -> int:
     The sum of the squares of all even numbers in the list.
     """
     # TODO: Implement sum_of_squares_of_even
-    pass
+    a = 0
+    for x in even_int_list:
+        if x%2 == 0:
+            a = a + (x*x)
+    
+    return a
+    
 
 # Main function
 def main():
